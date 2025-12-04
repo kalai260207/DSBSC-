@@ -1,6 +1,3 @@
-# DSBSC
-
-
 EX NO: 2	DSB-SC-AM MODULATOR AND DEMODULATOR
 
 AIM:
@@ -48,16 +45,30 @@ Model Waveform
 <img width="703" height="679" alt="image" src="https://github.com/user-attachments/assets/e7c7c7f8-ccf2-41ac-b1f3-325989941a6f" />
 
 Program
-<img width="316" height="444" alt="image" src="https://github.com/user-attachments/assets/c30fa8fe-705d-4339-a55a-2d91ce3b7150" />
-
-
+```
+Am=6.7;
+fm=597;
+fc=5970;
+fs=59700;
+t=0:1/fs:2/fm;
+m=Am*cos(2*3.14*fm*t);
+subplot(3,1,1);
+plot(t,m);
+Ac=13.4;
+c=Ac*cos(2*3.14*fc*t);
+subplot(3,1,2);
+plot(t,c);
+S1=(Ac+m).*cos(2*3.14*fc*t);
+S2=(Ac-m).*cos(2*3.14*fc*t);
+S=(S1-S2);
+subplot(3,1,3);
+plot(t,S);
+```
 Output Graph
-<img width="588" height="563" alt="image" src="https://github.com/user-attachments/assets/39861334-a354-408f-9e7d-39d89bf01a18" />
-
-
-
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/12d318ed-9c1e-4916-ac76-8938bf043470" />
 Tablular Column
-![WhatsApp Image 2025-11-18 at 12 32 27 PM (1)](https://github.com/user-attachments/assets/17e12361-749a-43e3-8427-1127c28df3d7)
+![20251121_232116](https://github.com/user-attachments/assets/aa14f955-bd44-4505-9d13-42d34d99c994)
+
 
 
 
